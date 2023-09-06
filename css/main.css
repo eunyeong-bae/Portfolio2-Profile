@@ -1,7 +1,119 @@
-.profile-progress {
+@charset "UTF-8";
+@font-face {
+  font-family: "NanumSquare";
+  font-weight: 400;
+  src: url(NanumsquareR.ttf) format("truetype");
+}
+div {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  line-height: 1.15; /*기본 행간 높이*/
+}
+
+h2, p {
+  margin: 0;
+}
+
+.d-flex, .side-bottom .location, .side-bottom .people-list, .side-top, .part-about .skill-list, .profile-content, .profile-progress, .profile-main .location, .profile-main, .profile {
   display: flex;
 }
 
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+}
+
+p {
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+th {
+  padding: 10px;
+  letter-spacing: -1px;
+}
+
+td {
+  padding: 10px;
+  font-size: 13px;
+  letter-spacing: -1px;
+}
+
+.mainBackground {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  font-family: "NanumSquare";
+  background-color: #f7f9fc;
+}
+
+.mainContainer {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.profile {
+  padding: 20px;
+  background: white;
+}
+
+.profile-main {
+  width: 65%;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #eee;
+}
+.profile-main img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.profile-main .detailInfo {
+  width: 85%;
+  padding: 20px 0 20px 30px;
+}
+.profile-main .detailInfo h2 {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.profile-main .detailInfo span {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.profile-main .location {
+  align-items: center;
+  margin: 10px 0;
+}
+.profile-main .location i {
+  color: #6fbaf8;
+}
+.profile-main .detailInfo p {
+  margin-left: 3px;
+  color: #6fbaf8;
+}
+.profile-main .btn-bg {
+  color: white;
+  background-color: #6fbaf8;
+}
+.profile-main .btn-bg:hover {
+  color: white;
+  background-color: #309cf5;
+}
+
+.profile-info {
+  width: 35%;
+  padding: 20px;
+}
+
+/*div profile-progress*/
 .w-2 {
   width: 15%;
   padding: 15px;
@@ -17,4 +129,194 @@
   width: 85%;
   padding: 15px;
   border-bottom: 3px solid #eee;
+}
+
+/*div profile-content*/
+.profile-content {
+  height: 500px;
+  padding: 20px 0;
+}
+
+.part-work {
+  width: 20%;
+  height: 40%;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.part-about {
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: white;
+  margin: 0 20px;
+  box-sizing: border-box;
+}
+.part-about .about1 {
+  height: 40%;
+}
+.part-about .about2 {
+  height: 60%;
+}
+.part-about .border-line {
+  width: 100%;
+  border: 1px solid #eee;
+  margin: 15px 0;
+}
+.part-about .skill-list {
+  flex-wrap: wrap;
+}
+.part-about .skill-list p {
+  border: 1px solid #eee;
+  padding: 7px;
+  margin: 3px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.part-side {
+  width: 20%;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.side-top {
+  height: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.side-top .icon {
+  color: #6fbaf8;
+  font-size: 50px;
+  margin: 5px 0;
+}
+.side-top .title1 {
+  font-weight: 600;
+  font-size: 14px;
+  margin: 10px 0;
+}
+.side-top .button {
+  border: none;
+  height: 40px;
+  font-size: 14px;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #6fbaf8;
+}
+.side-top .button:hover {
+  color: white;
+  background-color: #309cf5;
+}
+.side-top .title2 {
+  color: #6fbaf8;
+  margin: 5px 0;
+}
+
+.side-bottom {
+  height: 50%;
+  padding: 10px;
+}
+.side-bottom .title {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+.side-bottom .list-container {
+  padding: 5px 0;
+}
+.side-bottom .people-list {
+  align-items: center;
+  margin: 3px 0;
+}
+.side-bottom .people-list img {
+  width: 50px;
+  height: 50px;
+}
+.side-bottom .people-info {
+  width: 100%;
+}
+.side-bottom .people-info h3 {
+  margin: 0;
+  font-size: 14px;
+}
+.side-bottom .people-info p {
+  font-size: 12px;
+}
+.side-bottom .location {
+  color: #6fbaf8;
+  align-items: center;
+}
+.side-bottom .location i {
+  font-size: 13px;
+  margin-right: 2px;
+}
+
+@media screen and (max-width: 1400px) {
+  .part-side {
+    width: 20%;
+    height: 50%;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .side-top {
+    height: 100%;
+    text-align: center;
+  }
+  .side-bottom {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+  }
+  .profile-main {
+    width: 100%;
+    border: none;
+  }
+  .profile-info {
+    width: 100%;
+  }
+  .profile-content {
+    flex-direction: column;
+    height: 100%;
+  }
+  .part-work {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .part-about {
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: white;
+    margin: 20px 0;
+  }
+  .part-side {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: white;
+  }
+  .part-side .side-bottom {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

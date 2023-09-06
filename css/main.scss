@@ -1,14 +1,127 @@
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 400;
+    src : url(NanumsquareR.ttf) format('truetype')
+}
+
+div {
+    box-sizing : border-box;
+}
+body {
+    margin: 0;
+}
+html {
+    line-height : 1.15;/*기본 행간 높이*/
+}
+h2, p {
+    margin: 0;
+}
+
 $basic-blue-color : #6fbaf8;
 $basic-grey-color : #eee;
+$basic-white-color: white;
 
+.d-flex {
+    display: flex;
+}
+
+h3{
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -1.2px;
+}
+p{
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+
+th {
+    padding: 10px;
+    letter-spacing: -1px;
+}
+td {
+    padding: 10px;
+    font-size: 13px;
+    letter-spacing: -1px;
+}
+
+.mainBackground{
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+    font-family: 'NanumSquare';
+    background-color: #f7f9fc;
+}
+.mainContainer{
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+.profile{
+    @extend .d-flex;
+    padding: 20px;
+    background: $basic-white-color;
+}
+.profile-main{
+    @extend .d-flex;
+    width: 65%;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid $basic-grey-color;
+
+    img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+
+    .detailInfo {
+        width: 85%;
+        padding: 20px 0 20px 30px;
+    }
+    .detailInfo h2 {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    .detailInfo span{
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+    .location {
+        @extend .d-flex;
+        align-items: center;
+        margin: 10px 0;
+    }
+    .location i {
+        color: $basic-blue-color;
+    }
+    .detailInfo p {
+        margin-left: 3px;
+        color: $basic-blue-color;
+    }
+    .btn-bg {
+        color: $basic-white-color;
+        background-color: $basic-blue-color ;
+    }
+    .btn-bg:hover {
+        color: $basic-white-color;
+        background-color: #309cf5 ;
+    }
+}
+
+.profile-info{
+    width: 35%;
+    padding: 20px;
+}
+
+/*div profile-progress*/
 @mixin profile-width($width, $border-color) {
     width: $width;
     padding: 15px;
     border-bottom: 3px solid $border-color;
 }
-
 .profile-progress{
-    display: flex;
+    @extend .d-flex;
 }
 .w-2 {
     @include profile-width(15%, $basic-blue-color);
@@ -19,4 +132,173 @@ $basic-grey-color : #eee;
 }
 .w-8{
     @include profile-width(85%, $basic-grey-color);
+}
+
+/*div profile-content*/
+@mixin content-width($width, $height) {
+    width: $width;
+    height: $height;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: $basic-white-color;
+}
+
+.profile-content{
+    @extend .d-flex;
+    height: 500px;
+    padding: 20px 0;
+}
+.part-work {
+    @include content-width(20%, 40%);
+}
+.part-about {
+    @include content-width(60%, 100%);
+    margin: 0 20px;
+    box-sizing: border-box;
+    .about1 {
+        height: 40%;
+    }
+    .about2 {
+        height: 60%;
+    }
+    .border-line{
+        // height: px;
+        width: 100%;
+        border: 1px solid #eee;
+        margin: 15px 0;
+    }
+    .skill-list{
+        @extend .d-flex;
+        flex-wrap: wrap;
+    }
+    .skill-list p {
+        border: 1px solid #eee;
+        padding: 7px;
+        margin: 3px;
+        border-radius: 20px;
+        font-size: 12px;
+    }
+}
+
+.part-side{
+    @include content-width(20%, 100%);
+}
+
+.side-top {
+    height: 50%;
+    @extend .d-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+        color: $basic-blue-color;
+        font-size: 50px;
+        margin: 5px 0;
+    }
+    .title1 {
+        font-weight: 600;
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    .button {
+        border: none;
+        height: 40px;
+        font-size: 14px;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        background-color: #6fbaf8 ;
+    }
+    .button:hover{
+        color: $basic-white-color;
+        background-color: #309cf5 ;
+    }
+    .title2 {
+        color: $basic-blue-color;
+        margin: 5px 0;
+    }
+}
+.side-bottom {
+    height: 50%;
+    padding: 10px;
+
+    .title {
+        border-bottom: 2px solid $basic-grey-color;
+        padding-bottom: 5px;
+    }
+    .list-container{
+        padding: 5px 0;
+    }
+    .people-list{
+        @extend .d-flex;
+        align-items: center;
+        margin: 3px 0;
+    }
+    .people-list img {
+        width: 50px;
+        height: 50px;
+    }
+    .people-info{
+        width: 100%;
+    }
+    .people-info h3{
+        margin: 0;
+        font-size: 14px;
+    }
+    .people-info p{
+        font-size: 12px;
+    }
+    .location{
+        @extend .d-flex;
+        color: $basic-blue-color;
+        align-items: center;
+    }
+    .location i{
+        font-size: 13px;
+        margin-right: 2px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .part-side{
+        @include content-width(20%, 50%);
+    }
+    .side-top{
+        height: 100%;
+        text-align: center;
+    }
+    .side-bottom{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .profile{
+        flex-direction: column;
+    }
+    .profile-main{
+        width: 100%;
+        border: none;
+    }
+    .profile-info{
+        width: 100%;
+    }
+    .profile-content{
+        flex-direction: column;
+        height: 100%;
+    }
+    .part-work {
+        @include content-width(100%, 100%);
+    }
+    .part-about {
+        @include content-width(100%, 300px);
+        margin: 20px 0;
+    }
+    .part-side {
+        @include content-width(100%, 100%);
+
+        .side-bottom{
+            display: none;
+        }
+    }
 }
