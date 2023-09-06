@@ -1,0 +1,22 @@
+$basic-blue-color : #6fbaf8;
+$basic-grey-color : #eee;
+
+@mixin profile-width($width, $border-color) {
+    width: $width;
+    padding: 15px;
+    border-bottom: 3px solid $border-color;
+}
+
+.profile-progress{
+    display: flex;
+}
+.w-2 {
+    @include profile-width(15%, $basic-blue-color);
+}
+.w-2 p {
+    color: #6fbaf8;
+    text-align: center;
+}
+.w-8{
+    @include profile-width(85%, $basic-grey-color);
+}

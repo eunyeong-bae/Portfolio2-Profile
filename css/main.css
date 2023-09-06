@@ -1,0 +1,20 @@
+.profile-progress {
+  display: flex;
+}
+
+.w-2 {
+  width: 15%;
+  padding: 15px;
+  border-bottom: 3px solid #6fbaf8;
+}
+
+.w-2 p {
+  color: #6fbaf8;
+  text-align: center;
+}
+
+.w-8 {
+  width: 85%;
+  padding: 15px;
+  border-bottom: 3px solid #eee;
+}/*# sourceMappingURL=main.css.map */
